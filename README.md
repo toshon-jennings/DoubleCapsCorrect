@@ -98,6 +98,6 @@ gpg --verify DoubleCapsCorrect.sig DoubleCapsCorrect.exe
 ```
 SHA256: 137d4c250f11b2415cb660cfeb8ce440f5341292f29640b09ec833af60740181
 ```
-```
-VirusTotal File Scan Report: https://www.virustotal.com/gui/file-analysis/ZmMzYzFmMTE3OTQ0MTFiODdiZTkzMThhYWRlOTc1YTE6MTc1Mjk0MzIzMQ==
-```
+
+**VirusTotal File Scan Report:** https://www.virustotal.com/gui/file-analysis/ZmMzYzFmMTE3OTQ0MTFiODdiZTkzMThhYWRlOTc1YTE6MTc1Mjk0MzIzMQ==
+
