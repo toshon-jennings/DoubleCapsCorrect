@@ -34,7 +34,7 @@ Some apps may block simulated input — see Compatibility below.
 4. To auto-launch at startup:
    - Open File Explorer  
    - Type `shell:startup` in the address bar  
-   - Place a shortcut to the `.exe` there
+   - Place a shortcut to `DoubleCapsCorrect.exe` there
 
 </details>
 
