@@ -1,4 +1,4 @@
-# DoubleCApsCorrect
+# Double CAps Correct
 **Version 2.1**
 A background executable for keyboard perfectionists.
   
@@ -31,7 +31,7 @@ Some apps may block simulated input — see Compatibility below.
 
 1. Download `DoubleCapsCorrect.exe`  
 2. Save it anywhere (e.g. Desktop)  
-3. Double-click to run — look for the “DoubleCapsCorrect” logo or green “H” in the tray  
+3. Double-click to run — look for the “DoubleCapsCorrect” logo or green “H” in the system tray  
 4. To auto-launch at startup:
    - Open File Explorer  
    - Type `shell:startup` in the address bar  
