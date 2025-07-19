@@ -6,7 +6,7 @@ A background executable for keyboard perfectionists | Created by Toshon Jennings
 ---
 
 ## What It Does
-Fixes common double-capital typing errors across any app. For example:  
+Fixes common double-capital typing errors across most apps. For example:  
 `THis` → `This`  
 `FAster` → `Faster`  
 Runs silently and instantly when activated via hotkey.
