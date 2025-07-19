@@ -103,7 +103,7 @@ VirusTotal Report: https://www.virustotal.com/gui/file-analysis/ZmMzYzFmMTE3OTQ0
 
 ---
 © 2025 Toshon  
-This utility is provided as-is. Free to use, modify, and share with fellow keyboard perfectionists.
+This utility is provided as-is. This utility is provided as-is under a GNU AFFERO GENERAL PUBLIC LICENSE.
 
 
 
