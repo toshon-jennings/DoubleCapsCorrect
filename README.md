@@ -1,8 +1,7 @@
 # DoubleCApsCorrect
+**Version 2.1**
 A background executable for keyboard perfectionists.
-
-# DoubleCapsCorrect Utility  
-**Version 2.1**  
+  
 Created by Toshon | Powered by AutoHotkey v2  
 
 ---
