@@ -6,7 +6,7 @@ Created by Toshon | Powered by AutoHotkey v2
 
 ---
 
-## 🔍 What It Does
+## What It Does
 Fixes common double-capital typing errors across any app. For example:  
 `THis` → `This`  
 `FAster` → `Faster`  
@@ -15,19 +15,19 @@ Runs silently and instantly when activated via hotkey.
 ---
 
 <details>
-<summary>🎯 Activation & Usage</summary>
+<summary>Activation & Usage</summary>
 
 **Hotkey:** `Windows Key + \`` (Win + backtick)  
 Type in any app (Notepad, Word, etc.), then press the hotkey to clean up text.  
 
-💡 Some apps may block simulated input — see Compatibility below.
+Some apps may block simulated input — see Compatibility below.
 
 </details>
 
 ---
 
 <details>
-<summary>📥 Installation Instructions</summary>
+<summary>Installation Instructions</summary>
 
 1. Download `DoubleCapsCorrect.exe`  
 2. Save it anywhere (e.g. Desktop)  
@@ -42,7 +42,7 @@ Type in any app (Notepad, Word, etc.), then press the hotkey to clean up text.
 ---
 
 <details>
-<summary>🧠 How It Works Behind the Scenes</summary>
+<summary>How It Works Behind the Scenes</summary>
 
 - Selects all text in the current window (`Ctrl + A`)  
 - Copies it to the clipboard (`Ctrl + C`)  
@@ -54,7 +54,7 @@ Type in any app (Notepad, Word, etc.), then press the hotkey to clean up text.
 ---
 
 <details>
-<summary>💻 Compatibility</summary>
+<summary>Compatibility</summary>
 
 **✅ Works In:**
 - Notepad, WordPad, Microsoft Word, LibreOffice Writer  
@@ -70,7 +70,7 @@ Type in any app (Notepad, Word, etc.), then press the hotkey to clean up text.
 ---
 
 <details>
-<summary>🛠️ Customization</summary>
+<summary>Customization</summary>
 
 Want a different hotkey or rule set?  
 Edit the script with [AutoHotkey v2](https://www.autohotkey.com/) or contact Toshon at `toshon.tech@gmail.com`.
@@ -80,7 +80,7 @@ Edit the script with [AutoHotkey v2](https://www.autohotkey.com/) or contact Tos
 ---
 
 <details>
-<summary>🔐 Verifying the File</summary>
+<summary>Verifying the File</summary>
 
 You can verify this tool’s authenticity using a digital signature.
 
@@ -94,3 +94,7 @@ You can verify this tool’s authenticity using a digital signature.
 ```bash
 gpg --import Toshon_GPG_PublicKey.asc
 gpg --verify DoubleCapsCorrect.sig DoubleCapsCorrect.exe
+
+SHA256: 137d4c250f11b2415cb660cfeb8ce440f5341292f29640b09ec833af60740181
+
+VirusTotal File Scan Report: https://www.virustotal.com/gui/file-analysis/ZmMzYzFmMTE3OTQ0MTFiODdiZTkzMThhYWRlOTc1YTE6MTc1Mjk0MzIzMQ==
