@@ -1,0 +1,22 @@
+# System cruft
+*.DS_Store
+Thumbs.db
+desktop.ini
+
+# Signing artifacts
+*.sig
+*.asc
+*.key
+*.gpg
+
+# Archives & temp
+*.zip
+*.bak
+*.tmp
+*.log
+
+# Editor settings
+.vscode/
+*.sublime-project
+*.sublime-workspace
+
