@@ -1,8 +1,7 @@
 # Double CAps Correct
-**Version 2.1**
+**Version 2.1** | Powered by AutoHotkey v2
 
-A background executable for keyboard perfectionists. 
-Created by Toshon Jennings | Powered by AutoHotkey v2  
+A background executable for keyboard perfectionists | Created by Toshon Jennings   
 
 ---
 
