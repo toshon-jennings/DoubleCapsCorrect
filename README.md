@@ -91,6 +91,8 @@ You can verify this tool’s authenticity using a digital signature.
 
 **Verify with:**
 
+VirusTotal File Scan Report: https://www.virustotal.com/gui/file-analysis/ZmMzYzFmMTE3OTQ0MTFiODdiZTkzMThhYWRlOTc1YTE6MTc1Mjk0MzIzMQ==
+
 ```bash
 gpg --import Toshon_GPG_PublicKey.asc
 gpg --verify DoubleCapsCorrect.sig DoubleCapsCorrect.exe
@@ -98,8 +100,6 @@ gpg --verify DoubleCapsCorrect.sig DoubleCapsCorrect.exe
 ```
 SHA256: 137d4c250f11b2415cb660cfeb8ce440f5341292f29640b09ec833af60740181
 ```
-
-VirusTotal File Scan Report: https://www.virustotal.com/gui/file-analysis/ZmMzYzFmMTE3OTQ0MTFiODdiZTkzMThhYWRlOTc1YTE6MTc1Mjk0MzIzMQ==
 ---
 © 2025 Toshon  
 This utility is provided as-is. Free to use, modify, and share with fellow keyboard perfectionists.
