@@ -103,7 +103,7 @@ VirusTotal Report: https://www.virustotal.com/gui/file-analysis/ZmMzYzFmMTE3OTQ0
 ---
 © 2025 Toshon Jennings
 
-This utility is provided as-is under a GNU AFFERO GENERAL PUBLIC LICENSE.
+This utility is provided under a GNU AFFERO GENERAL PUBLIC LICENSE.
 
 
 
