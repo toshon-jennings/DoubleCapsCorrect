@@ -44,5 +44,5 @@ You should see a Good signature message if verification succeeds.
 - A valid signature proves the file came from Toshon and wasn’t tampered with
 - Timestamping .ots files are bonus proof-of-existence—coming soon
 
-#### Note
+### Note
 OpenTimestamp .ots files and full verification support are expected beginning with an upcoming release.
