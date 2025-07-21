@@ -1,7 +1,7 @@
 
 ---
 
-## 📘 `README.md` – Top-Level GitHub Version
+## 📘 `README.md` – GitHub Version
 
 ```markdown
 # CAps v2.1.1 – DoubleCapsCorrect Utility
