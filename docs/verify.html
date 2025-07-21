@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>CAps 2.1.1 Verification Guide</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      max-width: 700px;
+      margin: 2rem auto;
+      line-height: 1.6;
+      padding: 0 1rem;
+      color: #333;
+    }
+    h1, h2 {
+      color: #1d843c;
+    }
+    code {
+      background: #f4f4f4;
+      padding: 2px 6px;
+      border-radius: 4px;
+      font-family: monospace;
+    }
+    a {
+      color: #1d843c;
+      text-decoration: none;
+    }
+  </style>
+</head>
+
+<body>
+  <h1>🔐 Verify Your Download</h1>
+  <p>To confirm the authenticity of CAps v2.1.1, we provide:</p>
+
+  <ul>
+    <li>🗝️ A <strong>public key</strong>: <code>CAps_public.asc</code></li>
+    <li>🔏 A <strong>signature file</strong>: <code>CAps_v2.1.1.exe.sig</code></li>
+    <li>📄 A <strong>hash list</strong>: <code>Verify_Hashes_2.1.1.txt</code></li>
+  </ul>
+
+  <h2>Step 1: Import the Public Key</h2>
+  <p>Use GPG or Kleopatra to import <code>CAps_public.asc</code>.</p>
+
+  <h2>Step 2: Verify the Signature</h2>
+  <p>Run this command with GPG:</p>
+  <pre><code>gpg --verify CAps_v2.1.1.exe.sig CAps_v2.1.1.exe</code></pre>
+
+  <h2>Step 3: Confirm the Hash</h2>
+  <p>Run one of the following to check the file integrity:</p>
+  <pre><code>certutil -hashfile CAps_v2.1.1.exe SHA256</code></pre>
+  <pre><code>shasum -a 256 CAps_v2.1.1.exe</code></pre>
+
+  <h2>Browser Warnings</h2>
+  <p>Note: Chrome may flag ZIPs from personal sites—this is a false warning. All files are verified.</p>
+
+  <h2>Coming Soon</h2>
+  <p>📁 OpenTimestamp <code>.ots</code> support is expected in a future release.</p>
+</body>
+</html>
