@@ -49,6 +49,6 @@ Follow [`TrustGuide.md`](https://github.com/toshon-jennings/DoubleCapsCorrect/bl
 
 ## License
 
-CAps v2.1.1 is licensed under the **GNU AGPL v3**. You’re welcome to inspect, reuse, and redistribute it under its terms.
+CAps v2.1.1 is licensed under the **GNU AGPL v3**.
 
 ---
