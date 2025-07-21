@@ -4,8 +4,6 @@ CAps fixes clipboard typos where the first two letters are accidentally capitali
 This release introduces onboarding polish, verified distribution, and a trust flow that’s friction-free.
 
 ---
-
-<<<<<<< HEAD
 ## 📘 `README.md` – GitHub Version
 =======
 ## 🔧 What’s New in v2.1.1
