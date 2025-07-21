@@ -35,7 +35,7 @@ All binaries were signed using the verified key:
 
 ---
 
-## 🧪 How to Verify
+## How to Verify
 
 Follow [`TrustGuide.md`](https://github.com/toshon-jennings/DoubleCapsCorrect/blob/main/docs/TrustGuide.md) or use Kleopatra / GPG CLI to confirm:
 
