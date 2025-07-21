@@ -23,8 +23,10 @@ Use PowerShell or Command Prompt:
 ```powershell
 Get-FileHash "CAps 2.1.1.exe" -Algorithm SHA256
 Get-FileHash "CAps_v2.1.1.exe" -Algorithm SHA256
+```
 
-Step 2: Verify the Digital Signature
+## Step 2: Verify the Digital Signature
+
 Option A: Using Kleopatra
 - Import Toshon's public key (linked in README.md)
 - Right-click the .sig file → Decrypt / Verify
