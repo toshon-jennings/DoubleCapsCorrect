@@ -3,13 +3,11 @@
 CAps fixes clipboard typos where the first two letters are accidentally capitalized—like `"FAster"` → `"Faster"`. 
 This release introduces onboarding polish, verified distribution, and a trust flow that’s friction-free.
 
----
-
-<<<<<<< HEAD
-## 📘 `README.md` – GitHub Version
+=======
+## `README.md` – GitHub Version
 =======
 ## 🔧 What’s New in v2.1.1
->>>>>>> 316c663f5f355bec1b4ea72ba76dcaa35e3afbcc
+
 
 - Refined onboarding: tooltip + fallback ReadMe.txt
 - Trustable binaries: SHA-256 hashes + GPG signatures
@@ -51,6 +49,6 @@ Follow [`TrustGuide.md`](https://github.com/toshon-jennings/DoubleCapsCorrect/bl
 
 ## License
 
-CAps is licensed under the **GNU AGPL v3**. You’re welcome to inspect, reuse, and redistribute it under its terms.
+CAps v2.1.1 is licensed under the **GNU AGPL v3**. You’re welcome to inspect, reuse, and redistribute it under its terms.
 
 ---

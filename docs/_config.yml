@@ -1,0 +1,10 @@
+title: CAps – Trusted Clipboard Automation
+description: Secure, polished automation for keyboard perfectionists. Verifiable and user-friendly.
+author: Toshon Jennings
+theme: jekyll-theme-cayman
+
+# Optional GitHub Pages build settings
+markdown: kramdown
+plugins:
+  - jekyll-feed
+  - jekyll-sitemap

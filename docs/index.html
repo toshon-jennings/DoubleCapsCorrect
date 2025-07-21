@@ -1,0 +1,124 @@
+<head>
+  <meta charset="UTF-8">
+  <title>CAps Trust & Transparency</title>
+  <style>
+  body {
+  font-family: "Segoe UI", sans-serif;
+  background-color: #f5f5f5;
+  color: #2c2c2c;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  gap: 1em;
+  margin-bottom: 1.5em;
+}
+
+h1 {
+  color: #00A651;
+  margin: 0;
+  font-size: 2em;
+}
+
+h2, h3 {
+  color: #007A33;
+  border-bottom: 1px solid #cccccc;
+  padding-bottom: 0.3em;
+  margin-top: 2em;
+}
+
+a {
+  color: #00A651;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+  </style>
+</head>
+
+<header style="display: flex; align-items: center; gap: 1em; margin-bottom: 1em;">
+  <img src="caps-logo.png" alt="CAps Logo" style="height: 48px;">
+  <h1 style="color: #007A33;">Verify CAps 2.1.1 Integrity & Authenticity</h1>
+  <style>
+  h1 {
+  font-size: 2.5em;
+  margin: 0;
+  color: #00A651; /* Sport green */
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+  </style>
+  
+</header>
+
+<body>
+<h2>🔐 TRUST & TRANSPARENCY</h2>
+
+<p><strong>CAps v2.1.1 is built with privacy and consumer confidence in mind:</strong></p>
+
+<ul>
+  <li>Local-only operation — no network activity, no telemetry, no data collection</li>
+  <li>Digitally signed binaries (.sig) using RSA-4096 GPG keys</li>
+  <li>Included public key file for independent signature verification<p><a href="CAps_public.asc" download>Download CAps_public.asc (GPG Public Key)</a></p></li>
+  <li>SHA-256 hashes published for both EXEs to ensure file integrity</li>
+  <li>Fully offline, self-contained — runs directly on your system without external dependencies</li>
+  <li>Executables run locally without installation</li>
+</ul>
+
+<h3>📁 To Verify Integrity</h3>
+
+<ol>
+  <li>SHA-256 hashes provided for both EXE files:</li>
+</ol>
+
+<pre><code>CAps 2.1.1.exe (user-friendly): 91CB94D8CC10C404F20DEF0C840569BA7A1B22FB676094E8137C775CDBD4F6BE
+CAps_v2.1.1.exe (automation-friendly): 871C673D46FC7A9D6BA0DF0F7FC5CB7FBF70B1C4F615DB4540D5FA9F0729B37A
+</code></pre>
+
+<h3>🔑 To Verify Authenticity</h3>
+
+<ol>
+  <li>Import the public key:</li>
+</ol>
+
+<pre><code>gpg --import CAps_public.asc</code></pre>
+
+<ol start="2">
+  <li>Verify the signature:</li>
+</ol>
+
+<pre><code>gpg --verify CAps_v2.1.1.exe.sig CAps_v2.1.1.exe</code></pre>
+</br>
+<p>If valid, you’ll see a message confirming a good signature from:</p>
+
+<blockquote>
+  <p><strong>Toshon Jennings</strong>, toshon.tech@gmail.com</p>
+  <p><strong>Public Key Fingerprint:</strong></p>
+  <pre><code>pub rsa 4096 2025-07-21 [SC] [expires: 2027-07-21]
+7239 D2A1 0270 A354 8EA0  CBF0 A1F8 3168 9219 73B1</code></pre>
+</blockquote>
+
+<p><em>Confidentiality, integrity, and authenticity build trust. We deserve tools that make that visible.</em></p>
+
+<h3>❓ Frequently Asked Questions 🧐</h3>
+
+<dl>
+  <dt><strong>Q: Why does my antivirus or VirusTotal flag this EXE?</strong></dt>
+  <dd>AutoHotkey scripts often trigger false positives due to clipboard automation. CAps v2.1.1 is fully offline, self-contained, and signed with a GPG key. All verification instructions are provided so you can confirm safety independently.</dd>
+<br>
+  <dt><strong>Q: Why does VirusTotal say “Not signed”?</strong></dt>
+  <dd>CAps is signed with a GPG public key (<a href="CAps_public.asc" download>CAps_public.asc</a>), not a commercial Authenticode certificate. This protects open-source workflows without requiring centralized infrastructure.</dd>
+<br>
+  <dt><strong>Q: How can I verify the file hasn’t been tampered with?</strong></dt>
+  <dd>Use the provided <strong>.sig</strong> files or compare SHA-256 hashes in <strong>ReadMe.txt</strong> and <strong>Verify_Hashes_2.1.1.txt</strong>.</dd>
+<br>
+  <dt><strong>Q: Can I use CAps on any Windows version?</strong></dt>
+  <dd>Yes—CAps v2.1.1 is compiled with AutoHotkey v2 and runs on Windows 10 and 11 without external dependencies.</dd>
+<br>
+  <dt><strong>Q: Does CAps collect or transmit any data?</strong></dt>
+  <dd>No. CAps v2.1.1 runs locally, processes your clipboard, and exits silently. It doesn't send, save, or log anything externally.</dd>
+</dl>
+</body>
