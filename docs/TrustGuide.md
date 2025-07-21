@@ -35,8 +35,9 @@ Option B: Using GPG CLI
 gpg --verify CAps 2.1.1.exe.sig CAps 2.1.1.exe
 gpg --verify CAps_v2.1.1.exe.sig CAps_v2.1.1.exe
 
-
+```
 You should see a Good signature message if verification succeeds.
+```
 
 What This Means
 - A matching hash confirms the file hasn’t been modified
