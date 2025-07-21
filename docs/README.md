@@ -6,7 +6,8 @@
 ```markdown
 # CAps v2.1.1 – DoubleCapsCorrect Utility
 
-CAps corrects clipboard typos where the first two letters are accidentally capitalized—like `"FAster"` → `"Faster"`. Many apps miss this glitch; CAps fixes it instantly with a single shortcut.
+CAps corrects clipboard typos where the first two letters are accidentally capitalized—like `"FAster"` → `"Faster"`.
+Many apps miss this glitch; CAps fixes it instantly with a single shortcut.
 
 ---
 
