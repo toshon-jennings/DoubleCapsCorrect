@@ -27,7 +27,7 @@ Get-FileHash "CAps_v2.1.1.exe" -Algorithm SHA256
 
 ## Step 2: Verify the Digital Signature
 
-Option A: Using Kleopatra
+### Option A: Using Kleopatra
 - Import Toshon's public key (linked in README.md)
 - Right-click the .sig file → Decrypt / Verify
 - Kleopatra should confirm: "Signature is valid and verified"
@@ -39,7 +39,7 @@ gpg --verify CAps_v2.1.1.exe.sig CAps_v2.1.1.exe
 You should see a Good signature message if verification succeeds.
 ```
 
-What This Means
+### What This Means
 - A matching hash confirms the file hasn’t been modified
 - A valid signature proves the file came from Toshon and wasn’t tampered with
 - Timestamping .ots files are bonus proof-of-existence—coming soon
