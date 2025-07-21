@@ -127,7 +127,7 @@ body.dark-mode .faq-entry summary a:hover {
 
 <body>
 <h2>🔐 TRUST & TRANSPARENCY</h2>
-
+<button class="dark-toggle" onclick="toggleDarkMode()">🌙 Toggle Dark Mode</button>
 <p><strong>CAps v2.1.1 is built with privacy and consumer confidence in mind:</strong></p>
 
 <ul>
@@ -236,29 +236,41 @@ CAps_v2.1.1.exe (automation-friendly): 871C673D46FC7A9D6BA0DF0F7FC5CB7FBF70B1C4F
     <summary><h3> <a href="#is-caps-safe">Is CAps safe to run?</a></h3></summary>
     <p><strong>Yes.</strong> CAps is open-source and digitally signed. You can verify the executable using our 
       <a href="/verify.html" target="_blank" rel="noopener noreferrer">trust guide</a>, which includes hashes and signature instructions.</p>
-    <p>We don’t collect data, phone home, or modify your system—CAps is designed for transparency and user control.</p>
+    <p>CAps won’t collect data, phone home, or modify your system—it's designed for transparency and user control.</p>
   </details>
 
   <details class="faq-entry" id="windows-compatibility">
     <summary><h3> <a href="#windows-compatibility">Does CAps work on Windows 10 and 11?</a></h3></summary>
     <p><strong>Absolutely.</strong> CAps is tested on both Windows 10 and Windows 11, and works with most applications that accept standard keyboard input.</p>
-    <p>If you run into an edge case (like a sandboxed app or elevated window), let us know—we’re always improving compatibility.</p>
+    <p>If you run into an edge case (like a sandboxed app or elevated window), let me know—I'm always striving to improve compatibility.</p>
   </details>
 
   <details class="faq-entry" id="autohotkey-required">
     <summary><h3> <a href="#autohotkey-required">Do I have to have AutoHotkey installed to use CAps?</a></h3></summary>
     <p><strong>Nope.</strong> CAps is a fully self-contained executable—no need to install AutoHotkey separately.</p>
-    <p>We compile CAps using AutoHotkey’s standalone compiler, which bundles the interpreter directly into the <code>.exe</code>. That means:</p>
+    <p>I compile CAps using AutoHotkey’s standalone compiler, which bundles the interpreter directly into the <code>.exe</code>. That means:</p>
     <ul>
       <li>✅ You can run CAps on any Windows system without installing anything else</li>
       <li>✅ No background dependencies, registry changes, or system-wide hooks</li>
       <li>✅ Just download, run, and you're good to go</li>
     </ul>
-    <p>If you're curious or want to inspect the source, we do provide the original <code>.ahk</code> script in our 
-      <a href="https://github.com/YOUR_REPO_HERE" target="_blank" rel="noopener noreferrer">GitHub repo</a>, but it's totally optional.</p>
+    <p>If you're curious or want to inspect the source, I do provide the original <code>.ahk</code> script in my 
+      <a href="https://github.com/toshon-jennings/DoubleCapsCorrect" target="_blank" rel="noopener noreferrer">GitHub repo</a>, but it's totally optional.</p>
   </details>
 
 </section>
+
+<script>
+  if (localStorage.getItem("caps-dark-mode") === "true") {
+    document.body.classList.add("dark-mode");
+  }
+
+  function toggleDarkMode() {
+    document.body.classList.toggle("dark-mode");
+    const isDark = document.body.classList.contains("dark-mode");
+    localStorage.setItem("caps-dark-mode", isDark);
+  }
+</script>
 
 </body>
 <footer style="margin-top: 3rem; font-size: 0.85rem; color: #444; text-align: center;">
