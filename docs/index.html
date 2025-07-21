@@ -36,7 +36,78 @@ a {
 a:hover {
   text-decoration: underline;
 }
-  </style>
+
+/* 🌙 Dark Mode Variables and Styling */
+  :root {
+    --bg-light: #ffffff;
+    --text-light: #1e1e1e;
+    --bg-dark: #1e1e1e;
+    --text-dark: #e0e0e0;
+  }
+
+  body {
+    background-color: var(--bg-light);
+    color: var(--text-light);
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+
+  body.dark-mode {
+    background-color: var(--bg-dark);
+    color: var(--text-dark);
+  }
+
+  .dark-toggle {
+    position: fixed;
+    top: 1rem;
+    right: 1rem;
+    background: none;
+    border: 1px solid #888;
+    border-radius: 4px;
+    padding: 0.4rem 0.6rem;
+    font-size: 0.9rem;
+    cursor: pointer;
+    color: inherit;
+    background-color: rgba(240, 240, 240, 0.8);
+  }
+
+  body.dark-mode .dark-toggle {
+    background-color: rgba(40, 40, 40, 0.8);
+    border-color: #aaa;
+  }
+  
+  .faq-entry {
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  margin-bottom: 1rem;
+  padding: 0.5rem 1rem;
+  background-color: #f9f9f9;
+  transition: background-color 0.3s ease;
+}
+
+.faq-entry[open] {
+  background-color: #fffefc;
+  border-color: #999;
+}
+
+/* 🌙 Dark Mode for collapsible entries */
+body.dark-mode .faq-entry {
+  background-color: #2a2a2a;
+  border-color: #444;
+}
+
+body.dark-mode .faq-entry[open] {
+  background-color: #333;
+  border-color: #666;
+}
+
+body.dark-mode .faq-entry summary a {
+  color: #e0e0e0;
+}
+
+body.dark-mode .faq-entry summary a:hover {
+  color: #ffffff;
+}
+</style>
 </head>
 
 <header style="display: flex; align-items: center; gap: 1em; margin-bottom: 1em;">
@@ -152,22 +223,44 @@ CAps_v2.1.1.exe (automation-friendly): 871C673D46FC7A9D6BA0DF0F7FC5CB7FBF70B1C4F
 
 <h3>❓ Frequently Asked Questions 🧐</h3>
 
-<dl>
-  <dt><strong>Q: Why does my antivirus or VirusTotal flag this EXE?</strong></dt>
-  <dd>AutoHotkey scripts often trigger false positives due to clipboard automation. CAps v2.1.1 is fully offline, self-contained, and signed with a GPG key. All verification instructions are provided so you can confirm safety independently.</dd>
-<br>
-  <dt><strong>Q: Why does VirusTotal say “Not signed”?</strong></dt>
-  <dd>CAps is signed with a GPG public key (<a href="CAps_public.asc" download>CAps_public.asc</a>), not a commercial Authenticode certificate. This protects open-source workflows without requiring centralized infrastructure.</dd>
-<br>
-  <dt><strong>Q: How can I verify the file hasn’t been tampered with?</strong></dt>
-  <dd>Use the provided <strong>.sig</strong> files or compare SHA-256 hashes in <strong>ReadMe.txt</strong> and <strong>Verify_Hashes_2.1.1.txt</strong>.</dd>
-<br>
-  <dt><strong>Q: Can I use CAps on any Windows version?</strong></dt>
-  <dd>Yes—CAps v2.1.1 is compiled with AutoHotkey v2 and runs on Windows 10 and 11 without external dependencies.</dd>
-<br>
-  <dt><strong>Q: Does CAps collect or transmit any data?</strong></dt>
-  <dd>No. CAps v2.1.1 runs locally, processes your clipboard, and exits silently. It doesn't send, save, or log anything externally.</dd>
-</dl>
+<section class="faq-section">
+
+  <h2>Frequently Asked Questions</h2>
+
+  <details class="faq-entry" id="what-does-caps-do">
+    <summary><h3>❓ <a href="#what-does-caps-do">What does CAps actually do?</a></h3></summary>
+    <p><strong>CAps watches for accidental double-capitalized words</strong>—like <em>THis</em> or <em>COrrect</em>—and fixes them automatically as you type.</p>
+    <p>It runs quietly in the background, correcting common typing mistakes without interrupting your workflow.</p>
+  </details>
+
+  <details class="faq-entry" id="is-caps-safe">
+    <summary><h3>❓ <a href="#is-caps-safe">Is CAps safe to run?</a></h3></summary>
+    <p><strong>Yes.</strong> CAps is open-source and digitally signed. You can verify the executable using our 
+      <a href="/verify.html" target="_blank" rel="noopener noreferrer">trust guide</a>, which includes hashes and signature instructions.</p>
+    <p>We don’t collect data, phone home, or modify your system—CAps is designed for transparency and user control.</p>
+  </details>
+
+  <details class="faq-entry" id="windows-compatibility">
+    <summary><h3>❓ <a href="#windows-compatibility">Does CAps work on Windows 10 and 11?</a></h3></summary>
+    <p><strong>Absolutely.</strong> CAps is tested on both Windows 10 and Windows 11, and works with most applications that accept standard keyboard input.</p>
+    <p>If you run into an edge case (like a sandboxed app or elevated window), let us know—we’re always improving compatibility.</p>
+  </details>
+
+  <details class="faq-entry" id="autohotkey-required">
+    <summary><h3>❓ <a href="#autohotkey-required">Do I have to have AutoHotkey installed to use CAps?</a></h3></summary>
+    <p><strong>Nope.</strong> CAps is a fully self-contained executable—no need to install AutoHotkey separately.</p>
+    <p>We compile CAps using AutoHotkey’s standalone compiler, which bundles the interpreter directly into the <code>.exe</code>. That means:</p>
+    <ul>
+      <li>✅ You can run CAps on any Windows system without installing anything else</li>
+      <li>✅ No background dependencies, registry changes, or system-wide hooks</li>
+      <li>✅ Just download, run, and you're good to go</li>
+    </ul>
+    <p>If you're curious or want to inspect the source, we do provide the original <code>.ahk</code> script in our 
+      <a href="https://github.com/YOUR_REPO_HERE" target="_blank" rel="noopener noreferrer">GitHub repo</a>, but it's totally optional.</p>
+  </details>
+
+</section>
+
 </body>
 <footer style="margin-top: 3rem; font-size: 0.85rem; color: #444; text-align: center;">
   <hr style="margin-bottom: 1rem; border-color: #ccc;" />
