@@ -1,0 +1,36 @@
+Double Caps Correct - CAps v2.1.1 Release Notes
+Release Date: July 20, 2025
+Author: Toshon Jennings
+
+Highlights:
+- Dual EXE packaging for user and automation workflows
+- Digitally signed binaries with SHA-256 hashes
+- Enhanced onboarding: ToolTip, About dialog, fallback ReadMe
+- Polished icon assets and branding refinements
+
+New Features:
+- CAps 2.1.1.exe (user-friendly)
+- CAps_v2.1.1.exe (automation-friendly)
+- First-run ToolTip notification
+- About dialog with version and trust info
+
+Trust & Verification:
+- SHA-256 hashes included in Verify_Hashes.txt
+- GPG signatures (.sig files) for both EXEs
+- OpenTimestamps (.ots files) created
+
+Bug Fixes:
+- Tooltip positioning on multi-monitor setups
+- About dialog flicker on rapid launch/close
+
+Included Files:
+- CAps 2.1.1.exe
+- CAps_v2.1.1.exe
+- CAps_v2.1.1.exe.sig
+- CAps 2.1.1.exe.sig
+- Verify_Hashes.txt
+- ReadMe.txt
+
+Notes for upcoming releases re. OpenTimeStamps:
+- .ots files may appear as spreadsheets due to file association—this is cosmetic only
+- Timestamp verification may require rechecking after blockchain anchoring completes
