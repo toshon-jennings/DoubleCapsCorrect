@@ -45,4 +45,4 @@ You should see a Good signature message if verification succeeds.
 - Timestamping .ots files are bonus proof-of-existence—coming soon
 
 ### Note
-OpenTimestamp .ots files and full verification support are expected beginning with an upcoming release.
+OpenTimestamp ```.ots``` files and full verification support are expected beginning with an upcoming release.
