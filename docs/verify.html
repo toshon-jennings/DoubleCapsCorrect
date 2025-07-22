@@ -41,10 +41,48 @@
       color: #1d843c;
       text-decoration: none;
     }
+	body.dark-mode .dark-toggle {
+    background-color: rgba(40, 40, 40, 0.8);
+    border-color: #aaa;
+  }
+  
+  .faq-entry {
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  margin-bottom: 1rem;
+  padding: 0.5rem 1rem;
+  background-color: #f9f9f9;
+  transition: background-color 0.3s ease;
+}
+
+.faq-entry[open] {
+  background-color: #fffefc;
+  border-color: #999;
+}
+
+/* 🌙 Dark Mode for collapsible entries */
+body.dark-mode .faq-entry {
+  background-color: #2a2a2a;
+  border-color: #444;
+}
+
+body.dark-mode .faq-entry[open] {
+  background-color: #333;
+  border-color: #666;
+}
+
+body.dark-mode .faq-entry summary a {
+  color: #e0e0e0;
+}
+
+body.dark-mode .faq-entry summary a:hover {
+  color: #ffffff;
+}
   </style>
 </head>
 
 <body>
+<button class="dark-toggle" onclick="toggleDarkMode()">🌙 Toggle Dark Mode</button>
    <p>To confirm the authenticity of CAps v2.1.1, we provide:</p>
 
   <ul>
@@ -70,6 +108,23 @@
 
   <h2>Coming Soon</h2>
   <p>📁 OpenTimestamp <code>.ots</code> support is expected in a future release.</p>
+  
+  <script>
+  // On load, apply saved mode
+  if (localStorage.getItem("caps-dark-mode") === "true") {
+    document.body.classList.add("dark-mode");
+  }
+
+  // Toggle handler
+  function toggleDarkMode() {
+    document.body.classList.toggle("dark-mode");
+    localStorage.setItem(
+      "caps-dark-mode",
+      document.body.classList.contains("dark-mode")
+    );
+  }
+</script>
+
 </body>
 
 <footer style="margin-top: 3rem; font-size: 0.85rem; color: #444; text-align: center;">
