@@ -76,7 +76,7 @@ Q: Why does VirusTotal say “Not signed”?
 A: CAps is signed with a GPG public key (CAps_public.asc), not a commercial Authenticode certificate. This protects open-source workflows without requiring centralized infrastructure.
 
 Q: How can I verify the file hasn’t been tampered with?
-A: Use the provided `.sig` files or compare SHA-256 hashes in README and `hashes_v2.1.1.txt`. Step-by-step commands are included above in this ReadMe.
+A: Use the provided `.sig` files or compare SHA-256 hashes in README and `Verify_Hashes_2.1.1.txt`. Step-by-step commands are included above in this ReadMe.
 
 Q: Can I use CAps on any Windows version?
 A: Yes—CAps is compiled with AutoHotkey v2 and runs on Windows 10 and 11 without external dependencies.
