@@ -290,6 +290,36 @@ CAps_v2.1.1.exe (automation-friendly): 871C673D46FC7A9D6BA0DF0F7FC5CB7FBF70B1C4F
     <p>If you're curious or want to inspect the source, I do provide the original <code>.ahk</code> script in my 
       <a href="https://github.com/toshon-jennings/DoubleCapsCorrect" target="_blank" rel="noopener noreferrer">GitHub repo</a>, but it's totally optional.</p>
   </details>
+  
+ <details class="faq-entry" id="antivirus-false-positive">
+  <summary><h3> <a href="#antivirus-false-positive">Why does CAps sometimes get flagged by antivirus software?</a></h3></summary>
+  <p><strong>It’s a false positive.</strong> A few antivirus engines (typically around 5 out of 100) flag unsigned executables by default, especially when distributed outside major app stores.</p>
+  <p>CAps is completely open-source and digitally signed. You can verify its authenticity using our <a href="/verify.html" target="_blank" rel="noopener noreferrer">trust guide</a>, which includes hashes and GPG signature instructions.</p>
+</details>
+
+<details class="faq-entry" id="digital-signature">
+  <summary><h3> <a href="#digital-signature">Is CAps digitally signed?</a></h3></summary>
+  <p><strong>Yes.</strong> Each release includes a GPG signature (<code>.sig</code>) and public key (<code>CAps_public.asc</code>), so you can confirm that your download hasn’t been tampered with.</p>
+  <p>We also include a reference hash list—see <code>Verify_Hashes_2.1.1.txt</code> on the verification page.</p>
+</details>
+
+<details class="faq-entry" id="browser-warning">
+  <summary><h3> <a href="#browser-warning">Can I trust CAps if my browser shows a warning?</a></h3></summary>
+  <p><strong>Yes.</strong> Browser warnings can appear when downloading software from personal sites or GitHub repos. They aren’t based on the actual file contents.</p>
+  <p>CAps doesn’t contain malware and provides multiple ways for users to verify its integrity. Check our <a href="/verify.html" target="_blank" rel="noopener noreferrer">trust guide</a> to confirm that the download matches the expected hashes and signatures.</p>
+</details>
+
+<details class="faq-entry" id="notarization-whitelisting">
+  <summary><h3> <a href="#notarization-whitelisting">Why isn’t CAps notarized or whitelisted?</a></h3></summary>
+  <p><strong>Because it’s independent and open-source.</strong> CAps doesn’t pay for app store validation, antivirus whitelisting, or Windows branding.</p>
+  <p>Instead, it’s built around user trust—clean code, reproducible builds, and cryptographic verification you can do yourself.</p>
+</details>
+
+<details class="faq-entry" id="manual-verification">
+  <summary><h3> <a href="#manual-verification">How can I verify the download before installing?</a></h3></summary>
+  <p><strong>We recommend using Kleopatra or GPG.</strong> Just import the public key, then check the accompanying <code>.sig</code> file for signature match.</p>
+  <p>You can also compare hash outputs manually using tools like <code>certutil</code> or <code>Get-FileHash</code> in PowerShell.</p>
+</details>
 
 </section>
 
