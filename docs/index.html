@@ -314,6 +314,16 @@ CAps_v2.1.1.exe (automation-friendly): 871C673D46FC7A9D6BA0DF0F7FC5CB7FBF70B1C4F
   <p>You can also compare hash outputs manually using tools like <code>certutil</code> or <code>Get-FileHash</code> in PowerShell.</p>
 </details>
 
+<details class="faq-entry" id="taskmanager-32bit">
+  <summary><h3><a href="#taskmanager-32bit">Why is CAps showing up as 32-bit in Task Manager?</a></h3></summary>
+  <p>CAps is built using AutoHotkey v2, which compiles scripts into 32-bit executables by default—even on 64-bit systems. This doesn’t affect performance or compatibility. CAps runs smoothly on both 32-bit and 64-bit Windows environments, and its integrity is verified regardless of architecture.</p>
+</details>
+
+<details class="faq-entry" id="background-running">
+  <summary><h3><a href="#background-running">Is CAps running in the background?</a></h3></summary>
+  <p>No. CAps is a portable, on-demand tool. It only runs when launched manually and exits cleanly when closed. It doesn’t install services, background processes, or auto-start behavior. You can confirm this by checking Task Manager or using CAps’s own verification guide.</p>
+</details>
+
 </section>
 
 <script>
