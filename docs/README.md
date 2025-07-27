@@ -1,6 +1,6 @@
-# CAps v2.1.1 – Clipboard Auto-Correction Utility
+# CAps™ v2.1.1 – Clipboard Auto-Correction Utility
 
-CAps fixes clipboard typos where the first two letters are accidentally capitalized—like `"FAster"` → `"Faster"`. 
+CAps™ fixes clipboard typos where the first two letters are accidentally capitalized—like `"FAster"` → `"Faster"`. 
 This release introduces onboarding polish, verified distribution, and a trust flow that’s friction-free.
 
 =======
@@ -49,6 +49,6 @@ Follow [`TrustGuide.md`](https://github.com/toshon-jennings/DoubleCapsCorrect/bl
 
 ## License
 
-CAps v2.1.1 is licensed under the **GNU AGPL v3**.
+CAps™ v2.1.1 is licensed under the **GNU AGPL v3**.
 
 ---
