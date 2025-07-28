@@ -130,11 +130,25 @@ body.dark-mode .faq-entry summary a:hover {
   text-decoration: underline;
 }
 
+.sticky-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1em;
+  margin-bottom: 2em;
+  position: sticky;
+  top: 24px; /* Standard offset */
+  background: white;
+  z-index: 1000;
+  padding: 1.5em 0;
+  border-bottom: 1px solid #ccc;
+}
+
   </style>
 </head>
 
 <body>
-<header style="display: flex; flex-direction: column; align-items: center; gap: 1em; margin-bottom: 2em; position: sticky; top: 0; background: white; z-index: 1000; padding: 1.5em 0; border-bottom: 1px solid #ccc;">
+<header class="sticky-header" style="display: flex; flex-direction: column; align-items: center; gap: 1em; margin-bottom: 2em; position: sticky; top: 0; background: white; z-index: 1000; padding: 1.5em 0; border-bottom: 1px solid #ccc;">
   <div style="display: flex; align-items: center; justify-content: center; gap: 1em;">
     <img src="caps-logo.png" alt="CAps Logo" style="height: 48px;">
     <h1 style="color: #00A651; font-size: 2.5em; font-weight: 600; letter-spacing: 0.5px; margin: 0;">
