@@ -216,6 +216,10 @@ main.content-wrapper > h2:first-child {
   margin-top: 0; /* override default 2em from h2 */
 }
 
+main.content-wrapper > h3:first-child {
+  margin-top: 0; /* override default 2em from h3 for first element */
+}
+
 </style>
 </head>
 
@@ -238,7 +242,8 @@ main.content-wrapper > h2:first-child {
       </ul>
     </nav>
   </header>
- 
+
+<main class="content-wrapper">
    <h3>To confirm the authenticity of CAps™ v2.1.1, I provide:</h3>
 
   <ul>
@@ -264,7 +269,7 @@ main.content-wrapper > h2:first-child {
 
   <h2>Coming Soon</h2>
   <p>📁 OpenTimestamp <code>.ots</code> support is expected in a future release.</p>
-</body>
+</main>
 
 <footer style="margin-top: 3rem; font-size: 0.85rem; color: #444; text-align: center;">
   <hr style="margin-bottom: 1rem; border-color: #ccc;" />
@@ -275,4 +280,5 @@ main.content-wrapper > h2:first-child {
   <p style="margin-top: 0.5rem;">CAps™ v2.1.1 © 2025 — Licensed under <a href="https://www.gnu.org/licenses/agpl-3.0.html" style="color: #1d843c;">GNU AGPLv3</a></p>
 </footer>
 
+</body>
 </html>
