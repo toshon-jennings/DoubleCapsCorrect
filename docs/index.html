@@ -118,6 +118,35 @@ h3 {
   }
 }
 
+.faq-entry {
+  margin-bottom: 1.5em;
+  padding-bottom: 0.5em;
+  border-bottom: 1px solid #ccc;
+}
+
+.faq-entry summary {
+  display: flex;
+  align-items: center;
+  font-size: 1.1em;
+  cursor: pointer;
+  margin-bottom: 0.5em;
+}
+
+.faq-entry summary::marker {
+  font-size: 1.2em;
+  color: #00A651; /* match your green */
+}
+
+.faq-entry[open] summary {
+  margin-bottom: 0.5em;
+}
+
+.faq-entry p {
+  margin-top: 0;
+  margin-bottom: 0.5em;
+}
+
+
 </style>
 
 </head>
