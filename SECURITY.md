@@ -21,7 +21,7 @@ Please **do not create a public issue**.
 Instead, reach out privately using one of the following:
 
 - 📧 **Email**: `toshon.tech@gmail.com`  
-- 🔒 **GitHub Security Advisories**: If enabled, you can submit a [private advisory](https://docs.github.com/en/code-security/security-advisories/repository-security-advisories)
+- 🔒 **GitHub Security Advisories**: You can submit a [private advisory](https://docs.github.com/en/code-security/security-advisories/repository-security-advisories)
 
 ## ✅ What to Include
 
