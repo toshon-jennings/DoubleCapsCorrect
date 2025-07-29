@@ -7,118 +7,53 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
    <link rel="shortcut icon" type="image/x-icon" href="fav.ico?">
 <style>
-  body {
-  font-family: "Segoe UI", sans-serif;
-  background-color: #f5f5f5;
-  color: #2c2c2c;
+ body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  background-color: #ffffff;
+  color: #000000;
+  line-height: 1.6;
+  margin: 0;
+  padding: 0;
 }
 
-header {
+/* Wraps all content except full-width header/footer */
+.content-wrapper {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+header.site-header {
   display: flex;
+  flex-direction: column;
   align-items: center;
   gap: 1em;
-  margin-bottom: 1.5em;
+  margin-bottom: 2em;
+  position: sticky;
+  top: 0;
+  background: #ffffff;
+  z-index: 1000;
+  padding: 1.5em 0;
+  border-bottom: 1px solid #ccc;
+
+  /* Full-width layout trick */
+  width: 100vw;
+  margin-left: calc(-50vw + 50%);
+  margin-right: calc(-50vw + 50%);
 }
 
-h1 {
+header.site-header h1 {
   color: #00A651;
   font-size: 2.5em;
   font-weight: 600;
   letter-spacing: 0.5px;
   margin: 0;
-  /* No padding, no position sticky, no top */
 }
 
-h2, h3 {
-  color: #007A33;
-  border-bottom: 1px solid #cccccc;
-  padding-bottom: 0.3em;
-  margin-top: 2rem;
-}
-
-a {
-  color: #00A651;
-  text-decoration: none;
-}
-
-a:hover {
-  text-decoration: underline;
-}
-
-/* 🌙 Dark Mode Variables and Styling */
-  :root {
-    --bg-light: #ffffff;
-    --text-light: #1e1e1e;
-    --bg-dark: #1e1e1e;
-    --text-dark: #e0e0e0;
-  }
-
-  body {
-    background-color: var(--bg-light);
-    color: var(--text-light);
-    transition: background-color 0.3s ease, color 0.3s ease;
-  }
-
-  body.dark-mode {
-    background-color: var(--bg-dark);
-    color: var(--text-dark);
-  }
-
-  .dark-toggle {
-    position: fixed;
-    top: 1rem;
-    right: 1rem;
-    background: none;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    padding: 0.4rem 0.6rem;
-    font-size: 0.9rem;
-    cursor: pointer;
-    color: #ccc;
-    background-color: rgba(240, 240, 240, 0.8);
-  }
-
-  body.dark-mode .dark-toggle {
-    background-color: rgba(40, 40, 40, 0.8);
-    border-color: #aaa;
-  }
-  
-  .faq-entry {
-  border: 1px solid #ccc;
-  border-radius: 6px;
-  margin-bottom: 1rem;
-  padding: 0.5rem 1rem;
-  background-color: #f9f9f9;
-  transition: background-color 0.3s ease;
-}
-
-.faq-entry[open] {
-  background-color: #fffefc;
-  border-color: #999;
-}
-
-/* 🌙 Dark Mode for collapsible entries */
-body.dark-mode .faq-entry {
-  background-color: #2a2a2a;
-  border-color: #444;
-}
-
-body.dark-mode .faq-entry[open] {
-  background-color: #333;
-  border-color: #666;
-}
-
-body.dark-mode .faq-entry summary a {
-  color: #e0e0e0;
-}
-
-body.dark-mode .faq-entry summary a:hover {
-  color: #ffffff;
-}
 .nav-links {
   list-style: none;
   display: flex;
-  gap: 20px;
+  gap: 14px;
   margin: 0;
   padding: 0;
 }
@@ -133,44 +68,120 @@ body.dark-mode .faq-entry summary a:hover {
   text-decoration: underline;
 }
 
-.sticky-header {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 1em;
-  margin-bottom: 2em;
-  position: sticky;
-  top: 0; /* Standard offset */
-  background: white;
-  z-index: 1000;
-  padding: 1.5em 0;
+h1, h2, h3 {
+  font-weight: bold;
+  margin-top: 2rem;
+}
+
+h2 {
+  color: #007A33;
+  border-bottom: 1px solid #cccccc;
+  padding-bottom: 0.3em;
+  margin-top: 2em;
+}
+
+h3 {
+  color: #00A651;
+  padding-bottom: 0.3em;
+  margin-top: 2em;
+}
+
+/* Dark mode */
+@media (prefers-color-scheme: dark) {
+  body {
+    background-color: #1e1e1e;
+    color: #ffffff;
+  }
+
+  h2 {
+    color: #7FFFBE;
+    border-bottom: 1px solid #444;
+  }
+
+  h3 {
+    color: #4FFF9F;
+  }
+
+  header.site-header {
+     margin-bottom: 1em;
+	background: #1e1e1e;
+    border-bottom: 1px solid #444;
+  }
+
+  header.site-header h1 {
+    color: #4FFF9F;
+  }
+
+  .nav-links li a {
+    color: #ccc;
+  }
+
+  .nav-links li a:hover {
+    color: #ffffff;
+  }
+}
+
+.faq-entry {
+  margin-bottom: 1.5em;
+  padding-bottom: 0.5em;
   border-bottom: 1px solid #ccc;
 }
 
-  </style>
+.faq-entry summary {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 1.1em;
+  cursor: pointer;
+  padding: 0.4em 0;
+  transition: background-color 0.2s ease;
+  border-radius: 4px;
+}
+
+.faq-entry summary:hover {
+  background-color: #f3f3f3;
+}
+
+.faq-entry summary::marker {
+  font-size: 1.2em;
+  color: #00A651; /* match your green */
+}
+
+.faq-entry[open] summary {
+  margin-bottom: 0.5em;
+}
+
+.faq-entry p {
+  margin-top: 0;
+  margin-bottom: 0.5em;
+}
+
+main.content-wrapper > h2:first-child {
+  margin-top: 0; /* override default 2em from h2 */
+}
+
+</style>
 </head>
 
 <body>
-<header class="sticky-header">
-  <div style="display: flex; align-items: center; justify-content: center; gap: 1em;">
-    <img src="caps-logo.png" alt="CAps Logo" style="height: 48px;">
-    <h1 style="color: #00A651; font-size: 2.5em; font-weight: 600; letter-spacing: 0.5px; margin: 0;">
-      Verify CAps™ v2.1.1 Integrity & Authenticity
-    </h1>
-  </div>
-
-  <nav style="text-align: center;">
-    <ul class="nav-links" style="list-style: none; display: inline-flex; gap: 20px; padding: 0; margin: 0;">
-      <li><a href="https://toshon-jennings.github.io/DoubleCapsCorrect/">CAps™ 2.1.1</a></li>
+<header class="site-header">
+    <div style="display: flex; align-items: center; justify-content: center; gap: 1em;">
+      <img src="caps-logo.png" alt="CAps Logo" style="height: 48px;">
+      <p><h1>CAps™ 2.1.1</h1> <h3>A trust-first background executable for keyboard perfectionists.</h3></p>
+    </div>
+    
+    <nav style="text-align: center;">
+      <ul class="nav-links">
+        <li><a href="https://toshon-jennings.github.io/DoubleCapsCorrect/">CAps™ 2.1.1</a></li>
       <li><a href="https://toshon-jennings.github.io/DoubleCapsCorrect/verify.html">Verify</a></li>
       <li><a href="https://toshon-jennings.github.io/caps-cortex/">CAps-Cortex™</a></li>
       <li><a href="/caps-cortex/project-log.html">Project Log</a></li>
-	  <li><a href="https://toshon-jennings.github.io/caps-cortex/process-insights.html">Process Insights</a></li>
-	  <li><a href="https://github.com/toshon-jennings/DoubleCapsCorrect/wiki" target="_blank" rel="noopener">Wiki</a></li>
-	  <li><a href="/caps-cortex/about.html">About Toshon</a></li>
-    </ul>
-  </nav>
-</header>
+      <li><a href="https://toshon-jennings.github.io/caps-cortex/process-insights.html">Process Insights</a></li>
+      <li><a href="https://github.com/toshon-jennings/DoubleCapsCorrect/wiki" target="_blank" rel="noopener">Wiki</a></li>
+      <li><a href="/caps-cortex/about.html">About Toshon</a></li>
+      </ul>
+    </nav>
+  </header>
  
    <h3>To confirm the authenticity of CAps™ v2.1.1, I provide:</h3>
 
