@@ -14,7 +14,7 @@ currently being supported with security updates.
 
 If you’ve discovered a security vulnerability in this project, we appreciate your responsible disclosure and want to work with you to resolve it quickly.
 
-## 📬 How to Report
+## How to Report
 
 Please **do not create a public issue**.
 
@@ -23,7 +23,7 @@ Instead, reach out privately using one of the following:
 - 📧 **Email**: `toshon.tech@gmail.com`  
 - 🔒 **GitHub Security Advisories**: If enabled, you can submit a [private advisory](https://docs.github.com/en/code-security/security-advisories/repository-security-advisories)
 
-## 🧭 What to Include
+## ✅ What to Include
 
 To help us triage and address the issue, please include:
 
@@ -32,7 +32,7 @@ To help us triage and address the issue, please include:
 - Any potential impact or exploit scenario  
 - Suggested remediation, if available  
 
-We’ll acknowledge receipt within _[X hours]_ and provide updates as the issue is reviewed.
+We’ll acknowledge receipt within 48 business hours and provide updates as the issue is reviewed.
 
 ## 🤝 Trust Promise
 
