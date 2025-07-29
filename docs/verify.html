@@ -86,6 +86,29 @@ h3 {
   margin-top: 2em;
 }
 
+/* Stylish link styling for light mode */
+a {
+  color: #007A33;
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  transition: all 0.2s ease;
+}
+
+a:hover {
+  color: #00A651;
+  border-bottom: 1px solid #00A651;
+  text-decoration: none;
+}
+
+a:visited {
+  color: #005722;
+}
+
+a:visited:hover {
+  color: #007A33;
+  border-bottom: 1px solid #007A33;
+}
+
 /* Dark mode */
 @media (prefers-color-scheme: dark) {
   body {
@@ -119,6 +142,39 @@ h3 {
   .nav-links li a:hover {
     color: #ffffff;
   }
+
+  /* Dark mode link styling */
+  a {
+    color: #4FFF9F;
+    border-bottom: 1px solid transparent;
+  }
+
+  a:hover {
+    color: #7FFFBE;
+    border-bottom: 1px solid #7FFFBE;
+  }
+
+  a:visited {
+    color: #3FDF8F;
+  }
+
+  a:visited:hover {
+    color: #4FFF9F;
+    border-bottom: 1px solid #4FFF9F;
+  }
+}
+
+/* Special styling for download buttons (keep existing green background) */
+a[href*=".zip"], 
+a[style*="background-color: #1d843c"] {
+  color: #ffffff !important;
+  border-bottom: none !important;
+}
+
+a[href*=".zip"]:hover, 
+a[style*="background-color: #1d843c"]:hover {
+  background-color: #155a2b !important;
+  color: #ffffff !important;
 }
 
 .faq-entry {

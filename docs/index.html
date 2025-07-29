@@ -1,3 +1,5 @@
+<!DOCTYPE html>
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <title>CAps™ 2.1.1</title>
@@ -84,6 +86,29 @@ h3 {
   margin-top: 2em;
 }
 
+/* Stylish link styling for light mode */
+a {
+  color: #007A33;
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  transition: all 0.2s ease;
+}
+
+a:hover {
+  color: #00A651;
+  border-bottom: 1px solid #00A651;
+  text-decoration: none;
+}
+
+a:visited {
+  color: #005722;
+}
+
+a:visited:hover {
+  color: #007A33;
+  border-bottom: 1px solid #007A33;
+}
+
 /* Dark mode */
 @media (prefers-color-scheme: dark) {
   body {
@@ -117,6 +142,39 @@ h3 {
   .nav-links li a:hover {
     color: #ffffff;
   }
+
+  /* Dark mode link styling */
+  a {
+    color: #4FFF9F;
+    border-bottom: 1px solid transparent;
+  }
+
+  a:hover {
+    color: #7FFFBE;
+    border-bottom: 1px solid #7FFFBE;
+  }
+
+  a:visited {
+    color: #3FDF8F;
+  }
+
+  a:visited:hover {
+    color: #4FFF9F;
+    border-bottom: 1px solid #4FFF9F;
+  }
+}
+
+/* Special styling for download buttons (keep existing green background) */
+a[href*=".zip"], 
+a[style*="background-color: #1d843c"] {
+  color: #ffffff !important;
+  border-bottom: none !important;
+}
+
+a[href*=".zip"]:hover, 
+a[style*="background-color: #1d843c"]:hover {
+  background-color: #155a2b !important;
+  color: #ffffff !important;
 }
 
 .faq-entry {
@@ -266,7 +324,7 @@ CAps_v2.1.1.exe (automation-friendly): 871C673D46FC7A9D6BA0DF0F7FC5CB7FBF70B1C4F
 
 <pre><code>gpg --verify CAps_v2.1.1.exe.sig CAps_v2.1.1.exe</code></pre>
 </br>
-<p>If valid, you’ll see a message confirming a good signature from:</p>
+<p>If valid, you'll see a message confirming a good signature from:</p>
 
 <blockquote>
   <p><strong>Toshon Jennings</strong>, toshon.tech@gmail.com</p>
@@ -283,12 +341,12 @@ CAps_v2.1.1.exe (automation-friendly): 871C673D46FC7A9D6BA0DF0F7FC5CB7FBF70B1C4F
 
   <details class="faq-entry" id="what-does-caps-do">
   <summary><h3>What does CAps actually do?</h3></summary>
-  <p><strong>It fixes the “double caps” problem.</strong> When you hold Shift too long and end up with two capital letters at the start of a word—like <em>COrrection</em> or <em>DEvice</em>—CAps steps in and repairs them instantly. No highlighting, no fuss.</p>
+  <p><strong>It fixes the "double caps" problem.</strong> When you hold Shift too long and end up with two capital letters at the start of a word—like <em>COrrection</em> or <em>DEvice</em>—CAps steps in and repairs them instantly. No highlighting, no fuss.</p>
 </details>
 
 <details class="faq-entry" id="how-to-start-caps">
   <summary><h3>How do I start CAps?</h3></summary>
-  <p><strong>Just double-click the executable.</strong> CAps runs quietly in the background and won’t alter your text unless you trigger it. You’ll know it’s working when your corrections fire instantly—no splash screens, no distractions.</p>
+  <p><strong>Just double-click the executable.</strong> CAps runs quietly in the background and won't alter your text unless you trigger it. You'll know it's working when your corrections fire instantly—no splash screens, no distractions.</p>
 </details>
 
 <details class="faq-entry" id="how-to-trigger-caps">
@@ -301,7 +359,7 @@ CAps_v2.1.1.exe (automation-friendly): 871C673D46FC7A9D6BA0DF0F7FC5CB7FBF70B1C4F
     <summary><h3>Is CAps safe to run?</h3></summary>
     <p><strong>Yes.</strong> CAps is open-source and digitally signed. You can verify the executable using the 
       <a href="/verify.html" target="_blank" rel="noopener noreferrer">trust guide</a>, which includes hashes and signature instructions.</p>
-    <p>CAps won’t collect data, phone home, or modify your system—it's designed for transparency and user control.</p>
+    <p>CAps won't collect data, phone home, or modify your system—it's designed for transparency and user control.</p>
   </details>
 
   <details class="faq-entry" id="windows-compatibility">
@@ -313,7 +371,7 @@ CAps_v2.1.1.exe (automation-friendly): 871C673D46FC7A9D6BA0DF0F7FC5CB7FBF70B1C4F
   <details class="faq-entry" id="autohotkey-required">
     <summary><h3>Do I have to have AutoHotkey installed to use CAps?</h3></summary>
     <p><strong>Nope.</strong> CAps is a fully self-contained executable—no need to install AutoHotkey separately.</p>
-    <p>I compiled CAps using AutoHotkey’s standalone compiler, which bundles the interpreter directly into the <code>.exe</code>. That means:</p>
+    <p>I compiled CAps using AutoHotkey's standalone compiler, which bundles the interpreter directly into the <code>.exe</code>. That means:</p>
     <ul>
       <li>✅ You can run CAps on any Windows system without installing anything else</li>
       <li>✅ No background dependencies, registry changes, or system-wide hooks</li>
@@ -325,26 +383,26 @@ CAps_v2.1.1.exe (automation-friendly): 871C673D46FC7A9D6BA0DF0F7FC5CB7FBF70B1C4F
   
  <details class="faq-entry" id="antivirus-false-positive">
   <summary><h3>Why does CAps sometimes get flagged by antivirus software?</h3></summary>
-  <p><strong>It’s a false positive.</strong> A few antivirus engines (typically around 5 out of 100) flag unsigned executables by default, especially when distributed outside major app stores.</p>
+  <p><strong>It's a false positive.</strong> A few antivirus engines (typically around 5 out of 100) flag unsigned executables by default, especially when distributed outside major app stores.</p>
   <p>CAps is completely open-source and digitally signed. You can verify its authenticity using our <a href="/verify.html" target="_blank" rel="noopener noreferrer">trust guide</a>, which includes hashes and GPG signature instructions.</p>
 </details>
 
 <details class="faq-entry" id="digital-signature">
   <summary><h3>Is CAps digitally signed?</h3></summary>
-  <p><strong>Yes.</strong> Each release includes a GPG signature (<code>.sig</code>) and public key (<code>CAps_public.asc</code>), so you can confirm that your download hasn’t been tampered with.</p>
+  <p><strong>Yes.</strong> Each release includes a GPG signature (<code>.sig</code>) and public key (<code>CAps_public.asc</code>), so you can confirm that your download hasn't been tampered with.</p>
   <p>I also include a reference hash list—see <code>Verify_Hashes_2.1.1.txt</code> on the verification page.</p>
 </details>
 
 <details class="faq-entry" id="browser-warning">
   <summary><h3>Can I trust CAps if my browser shows a warning?</h3></summary>
-  <p><strong>Yes.</strong> Browser warnings can appear when downloading software from personal sites or GitHub repos. They aren’t based on the actual file contents.</p>
-  <p>CAps doesn’t contain malware and provides multiple ways for users to verify its integrity. Check our <a href="/verify.html" target="_blank" rel="noopener noreferrer">trust guide</a> to confirm that the download matches the expected hashes and signatures.</p>
+  <p><strong>Yes.</strong> Browser warnings can appear when downloading software from personal sites or GitHub repos. They aren't based on the actual file contents.</p>
+  <p>CAps doesn't contain malware and provides multiple ways for users to verify its integrity. Check our <a href="/verify.html" target="_blank" rel="noopener noreferrer">trust guide</a> to confirm that the download matches the expected hashes and signatures.</p>
 </details>
 
 <details class="faq-entry" id="notarization-whitelisting">
-  <summary><h3>Why isn’t CAps notarized or whitelisted?</h3></summary>
-  <p><strong>Because it’s independent and open-source.</strong> CAps doesn’t pay for app store validation, antivirus whitelisting, or Windows branding.</p>
-  <p>Instead, it’s built around user trust—clean code, reproducible builds, and cryptographic verification you can do yourself.</p>
+  <summary><h3>Why isn't CAps notarized or whitelisted?</h3></summary>
+  <p><strong>Because it's independent and open-source.</strong> CAps doesn't pay for app store validation, antivirus whitelisting, or Windows branding.</p>
+  <p>Instead, it's built around user trust—clean code, reproducible builds, and cryptographic verification you can do yourself.</p>
 </details>
 
 <details class="faq-entry" id="manual-verification">
@@ -355,12 +413,12 @@ CAps_v2.1.1.exe (automation-friendly): 871C673D46FC7A9D6BA0DF0F7FC5CB7FBF70B1C4F
 
 <details class="faq-entry" id="taskmanager-32bit">
   <summary><h3>Why is CAps showing up as 32-bit in Task Manager?</h3></summary>
-  <p>CAps is built using AutoHotkey v2, which compiles scripts into 32-bit executables by default—even on 64-bit systems. This doesn’t affect performance or compatibility. CAps runs smoothly on both 32-bit and 64-bit Windows environments, and its integrity is verified regardless of architecture.</p>
+  <p>CAps is built using AutoHotkey v2, which compiles scripts into 32-bit executables by default—even on 64-bit systems. This doesn't affect performance or compatibility. CAps runs smoothly on both 32-bit and 64-bit Windows environments, and its integrity is verified regardless of architecture.</p>
 </details>
 
 <details class="faq-entry" id="background-running">
   <summary><h3>Is CAps running in the background?</h3></summary>
-  <p>CAps is a portable, on-demand tool and <strong>only runs when launched manually, exiting cleanly when closed.</strong> It doesn’t install services, background processes, or auto-start behavior. You can confirm this by checking Task Manager or using CAps’s own verification guide.</p>
+  <p>CAps is a portable, on-demand tool and <strong>only runs when launched manually, exiting cleanly when closed.</strong> It doesn't install services, background processes, or auto-start behavior. You can confirm this by checking Task Manager or using CAps's own verification guide.</p>
 </details>
 
 </section>
@@ -387,3 +445,5 @@ CAps_v2.1.1.exe (automation-friendly): 871C673D46FC7A9D6BA0DF0F7FC5CB7FBF70B1C4F
   </p>
   <p style="margin-top: 0.5rem;">CAps v2.1.1 © 2025 — Licensed under <a href="https://www.gnu.org/licenses/agpl-3.0.html" style="color: #1d843c;">GNU AGPLv3</a></p>
 </footer>
+
+</html>
