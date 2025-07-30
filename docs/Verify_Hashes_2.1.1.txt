@@ -2,7 +2,6 @@
 DoubleCapsCorrect – CAps v2.1.1 Final Release
 ----------------------------------------------------
 ✅ Versioned, signed, and hash-verified
-✅ ToolTip and onboarding on launch
 ✅ Hotkeys: Win+`, Ctrl+Shift+Alt+C
 ✅ Reads ReadMe.txt on first launch
 ✅ RSA4096 GPG signatures supported externally
